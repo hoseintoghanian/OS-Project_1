@@ -49,7 +49,7 @@ void process_folder(const char *folder_name) {
 
 
 // ساختار دیتابیس (فایل ساده)
-#define DATABASE_FILE "/home/ali/Desktop/database.txt"
+#define DATABASE_FILE "Home//Desktop/database.txt"
 
 // ساختار برای ذخیره یوزرنیم و یوزرآیدی
 struct user {
@@ -58,7 +58,7 @@ struct user {
 };
 
 
-struct {
+typedef struct {
     char name[100];
     int Count;
     float price;
@@ -199,7 +199,7 @@ int main() {
                 }
             }
         }
-        const char *base_dir = "/home/ali/Desktop/Dataset";
+        const char *base_dir = "/Home/Downloads/Dataset";
         const char *subfolders[] = {"Store1", "Store2", "Store3"};
         pid_t pid1;
         for (int i = 0; i < 3; i++)
