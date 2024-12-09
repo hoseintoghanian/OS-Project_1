@@ -45,28 +45,23 @@ void process_folder(const char *folder_name) {
     printf("Parent process (PID: %d) completed\n", getpid());    
 } 
 
-
-
-
 // ساختار دیتابیس (فایل ساده)
-#define DATABASE_FILE "Home//Desktop/database.txt"
-
+#define DATABASE_FILE "/home/hoseintoghanian/Desktop/database.txt"
 // ساختار برای ذخیره یوزرنیم و یوزرآیدی
+
 struct user {
     char username[100];
     int user_id;
 };
 
-
-typedef struct {
+struct Product {
     char name[100];
     int Count;
     float price;
-} Product;
+};
 
 #define MAX_ORDER_ITEMS 100
 #define MAX_ITEM_LENGTH 50
-
 // ساختار برای ذخیره هر آیتم سفارش
 typedef struct {
     char item_name[MAX_ITEM_LENGTH];
@@ -199,7 +194,7 @@ int main() {
                 }
             }
         }
-        const char *base_dir = "/Home/Downloads/Dataset";
+        const char *base_dir = "/home/hoseintoghanian/Desktop/os-project_1/OS-Project_1/Dataset";
         const char *subfolders[] = {"Store1", "Store2", "Store3"};
         pid_t pid1;
         for (int i = 0; i < 3; i++)
